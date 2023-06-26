@@ -1,0 +1,54 @@
+@mixin sm {
+    @media only screen and (min-width:640px) {
+        @content
+    }
+}
+
+@mixin md {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media only screen and (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media only screen and (min-width: 1536px) {
+        @content;
+    }
+}
+
+//  A mixin is a reusable block of CSS code that can be included in other stylesheets. Let's break down the mixin and its properties:
+//This mixin is used to apply an ellipsis (i.e., "..." truncation) to text that exceeds a specified number of lines. Here's an explanation of each property:
+
+// $line: 2: This is a parameter for the mixin that specifies the number of lines before truncating the text. By default, it is set to 2 lines, but you can provide a different value when using the mixin. display: -webkit-box;
+// : This property enables the old -webkit-box layout model in web browsers that support it. It's used as a workaround to achieve multi-line truncation.
+
+// -webkit-line-clamp: $line;
+// : This property specifies the number of lines of text to show before truncating with an ellipsis. It uses the -webkit-line-clamp property,
+// which is specific to WebKit-based browsers like Chrome and Safari. -webkit-box-orient: vertical;
+// : This property sets the orientation of the box to vertical,
+// ensuring that the text is truncated vertically after the specified number of lines. overflow: hidden;
+// : This property hides any overflow of the text beyond the specified number of lines,
+// ensuring that it does not extend beyond the container. text-overflow: ellipsis;
+// : This property adds an ellipsis ("...") at the point where the text is truncated,
+// indicating that there is more content that is not fully visible.
+
+@mixin ellipsis($line: 2) {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
