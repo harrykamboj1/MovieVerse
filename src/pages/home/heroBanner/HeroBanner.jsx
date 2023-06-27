@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./style.scss";
 import useFetch from "../../../hooks/useFetch";
-import Img from "../../../components/lazyLoadImages/img";
+import Img from "../../../components/lazyLoadImages/Img";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 
 function HeroBanner() {
@@ -31,12 +31,12 @@ function HeroBanner() {
   };
   return (
     <div className="heroBanner">
-      {!loading && (
+      {!loading && 
         <div className="backdrop-img">
           {/* {Setting Background Image} */}
           <Img src={background} />
         </div>
-      )}
+      }
       <div className="opacity-layer">
         
       </div>
@@ -44,7 +44,7 @@ function HeroBanner() {
           <div className="heroBannerContent">
             <span className="title">Welcome</span>
             <span className="subTitle">
-              Unleash Your Cinematic Journey on MovieVerse
+              Unleash Your Cinematic Journey on MoviX
             </span>
             <div className="searchInput">
               <input

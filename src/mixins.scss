@@ -4,8 +4,8 @@
     }
 }
 
-@mixin md {
-    @media only screen and (min-width: 768px) {
+@mixin xxl {
+    @media only screen and (min-width: 1536px) {
         @content;
     }
 }
@@ -16,17 +16,19 @@
     }
 }
 
+@mixin md{
+    @media only screen and (min-width:768px){
+        @content;
+    }
+}
+
 @mixin xl {
     @media only screen and (min-width: 1280px) {
         @content;
     }
 }
 
-@mixin xxl {
-    @media only screen and (min-width: 1536px) {
-        @content;
-    }
-}
+
 
 //  A mixin is a reusable block of CSS code that can be included in other stylesheets. Let's break down the mixin and its properties:
 //This mixin is used to apply an ellipsis (i.e., "..." truncation) to text that exceeds a specified number of lines. Here's an explanation of each property:
